@@ -1,0 +1,19 @@
+<h3>Créer Publication</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form [formGroup]="publicationForm" (ngSubmit)="save()">
+    
+
+    <div class="form-group">
+      <label for="name">texte</label>
+      <input type="text" class="form-control" id="name" required formControlName="texte" name="texte">
+    </div>
+
+   
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
